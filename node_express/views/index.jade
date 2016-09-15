@@ -7,14 +7,18 @@ block content
       padding: 15px;
       margin: 0 auto;
     }
+    .error {
+      color: red;
+    }
 
   .container
     form.form-signin(action="/login" method="post")
       .col-md-12.bordered
-        h1.text-center Login
+        //h1.text-center Login
         .input-group-vertical
+          .error !{error}
           .form-group
-            input.form-control(type="text" placeholder="UserName")
-            input.form-control(type="password" placeholder="Password")
+            input.form-control(type="text" placeholder="ユーザー名" name="userName")
+            input.form-control(type="password" placeholder="パスワード" name="password")
           .form-group
-            button.btn.btn-lg.btn-primary.btn-block(type="submit") Login
+            button.btn.btn-lg.btn-primary.btn-block(type="submit") ログイン
